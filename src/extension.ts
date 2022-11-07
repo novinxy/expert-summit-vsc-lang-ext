@@ -2,6 +2,7 @@ import * as vscode from 'vscode';
 import * as testCreation from './testCreator';
 import { TestExtHoverProvider } from './testHoverProvider';
 import { TestExtCompletionProvider as TestExtCompletionProvider } from './testCompletionProvider';
+import { TestExtDefinitionProvider as TestExtDefinitionProvider} from './testDefinitionProvider';
 
 
 export function activate(context: vscode.ExtensionContext) {
@@ -10,7 +11,6 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.commands.registerCommand('lang-extension.newTestExtFile', async args => testCreation.addTestFile(args)),
 		vscode.languages.registerHoverProvider('testExt', new TestExtHoverProvider()),
 		vscode.languages.registerCompletionItemProvider('testExt', new TestExtCompletionProvider(), ' ', '[a-zA-Z]'),
+		vscode.languages.registerDefinitionProvider('testExt', new TestExtDefinitionProvider())
 	);
 }
-
-export function deactivate() { }
