@@ -1,0 +1,25 @@
+{
+    "Settings": {
+        "prefix": "Settings",
+        "body": [
+            "[Settings]",
+            "- HiCount: ${1:2}",
+            "- HiModel: ${2:Default}",
+            "- TestCategory: ${3:Regression}"
+        ],
+        "description": "defines basis settings configuration"
+    },
+    "Structure": {
+        "prefix": "struct",
+        "body": [
+            "[Settings]",
+            "- HiCount: ${1:2}",
+            "- HiModel: ${2:Default}",
+            "- TestCategory: ${3:Regression}",
+            "",
+            "[Test]",
+            "${4:App StartApplication\nApp CloseApplication}"
+        ],
+        "description": "defines basic test structure"
+    }
+}

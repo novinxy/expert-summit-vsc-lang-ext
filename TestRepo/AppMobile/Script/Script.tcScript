@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root signature="{9252F941-DB23-4FCA-AA50-858B33BB4A19}" version="11.40">
+	<children>
+		<folder name="Framework">
+			<folder name="AppDesktop">
+				<child name="App" key="{7B5FE79A-F74F-458E-BD17-6524A9EE7359}" path="App.sj" />
+				<child name="RemoteChat" key="{69473F13-F2B4-4392-9158-A48F6814FA60}" path="RemoteChat.sj" />
+				<child name="HearingInstrument" key="{8E9BDE11-1FDB-4834-A865-54B3D0C442E7}" path="HearingInstrument.sj" />
+			</folder>
+		</folder>
+	</children>
+</Root>

@@ -1,0 +1,104 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "TestExt Language",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#comment"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "variable.other.object.testExt",
+				"match": "^\\b\\w+(?=\\s+)"
+			},
+			{
+				"name": "keyword.control",
+				"match": "\\[\\w+\\]"
+			},
+			{
+				"name": "constant.numeric",
+				"match": "(?=:\\s{1})\\w+"
+			},
+			{
+				"name": "meta.preprocessor",
+				"match": "(?<=-\\s{1})\\w+(?=:)"
+			},
+			{
+				"name": "entity.name.function.testExt",
+				"match": "(?<=\\w+\\s{1})\\w+"
+			}]
+		},
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.block.documentation.testExt",
+					"begin": "/\\*\\*(?!/)",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.testExt"
+						}
+					},
+					"end": "\\*/",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.testExt"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#docblock"
+						}
+					]
+				},
+				{
+					"name": "comment.block.testExt",
+					"begin": "(/\\*)(?:\\s*((@)internal)(?=\\s|(\\*/)))?",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.definition.comment.testExt"
+						},
+						"2": {
+							"name": "storage.type.internaldeclaration.testExt"
+						},
+						"3": {
+							"name": "punctuation.decorator.internaldeclaration.testExt"
+						}
+					},
+					"end": "\\*/",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.testExt"
+						}
+					}
+				},
+				{
+					"begin": "(^[ \\t]+)?((//)(?:\\s*((@)internal)(?=\\s|$))?)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.whitespace.comment.leading.testExt"
+						},
+						"2": {
+							"name": "comment.line.double-slash.testExt"
+						},
+						"3": {
+							"name": "punctuation.definition.comment.testExt"
+						},
+						"4": {
+							"name": "storage.type.internaldeclaration.testExt"
+						},
+						"5": {
+							"name": "punctuation.decorator.internaldeclaration.testExt"
+						}
+					},
+					"end": "(?=$)",
+					"contentName": "comment.line.double-slash.testExt"
+				}
+			]
+		}
+	},
+	"scopeName": "source.testExt"
+}

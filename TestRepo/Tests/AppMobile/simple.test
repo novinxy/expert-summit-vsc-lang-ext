@@ -1,0 +1,13 @@
+[Settings]
+- HiCount: 2
+- HiModel: Default
+- TestCategory: Regression
+
+[Test]
+App StartMobileApplication
+HearingInstrument Connect
+RemoteChat ConnectToDoctor
+RemoteChat GetPrescription
+HearingInstrument LoadPrescription
+RemoteChat DisconnectWithDoctor
+App CloseMobileApplication

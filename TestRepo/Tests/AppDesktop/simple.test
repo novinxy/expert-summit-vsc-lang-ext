@@ -1,0 +1,12 @@
+[Settings]
+- HiCount: 2
+- HiModel: Default
+- TestCategory: Regression
+
+[Test]
+App StartApplication
+App OpenclientView
+ClientListView SelectFirstClient
+HearingInstrument Connect
+HearingInstrument ConfigureInstrument
+App CloseApplication
