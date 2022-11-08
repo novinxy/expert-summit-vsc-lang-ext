@@ -12,7 +12,6 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:lang-extension.newTestExtFile",
 		"onLanguage:testExt"
 	],
 	"main": "./out/extension.js",
@@ -42,22 +41,7 @@
 				"language": "testExt",
 				"path": "./snippets/snippets.json"
 			}
-		],
-		"commands": [
-			{
-				"command": "lang-extension.newTestExtFile",
-				"title": "New Test File"
-			}
-		],
-		"menus": {
-			"explorer/context": [
-				{
-					"when": "explorerResourceIsFolder && resourceDirname =~ /Tests/gm",
-					"command": "lang-extension.newTestExtFile",
-					"group": "langExtGroup"
-				}
-			]
-		}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
